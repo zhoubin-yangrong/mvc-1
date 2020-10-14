@@ -3,6 +3,19 @@ ul,ol{
     list-style: none;
 }
 *::before,*::after{box-sizing: border-box;}
+body{
+    overflow: hidden;
+}
+body > .page{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+body > .page >section{
+    width: 49vw;
+    height: 49vh;
+}
+
 #app1{
     border: 1px solid red;
     width: 49vw;
@@ -46,18 +59,26 @@ ul,ol{
 #app3 .square.active{
    transform: translateX(15vw);
 }
-body{
-    overflow: hidden;
-}
-body > .page{
-    display: flex;
-    flex-wrap: wrap;
-   
-}
-body > .page >section{
-    width: 49vw;
-    height: 49vh;
+#app4 {}
+
+@keyframes change {
+    0% {
+        background-color: red;
+    }
+
+    100% {
+        background-color: blue
+    }
 }
 
+#app4 .circle {
+    border: 1px solid black;
+    width: 15vw;
+    height: 15vh;
+    border-radius: 50%;
+}
+#app4 .circle.active {
+    animation: change 1s infinite alternate linear
+}
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */
